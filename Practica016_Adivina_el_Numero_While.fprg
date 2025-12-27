@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 05:04:36 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTY7MDc6MTM6NTkgcC4gbS47MzM3NQ=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDU6MDQ6MzYgcC4gbS47OTszNDg1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Adivina el N&#250;mero (con bucle `Fer-Mentre`)&#13;&#10;Crea un algoritmo que pida al usuario que adivine un n&#250;mero predeterminado (por ejemplo, 7). El programa debe seguir pidiendo n&#250;meros hasta que el usuario adivine correctamente, pero debe garantizar al menos una ejecuci&#243;n."/>
+            <declare name="nom" type="Integer" array="False" size=""/>
+            <declare name="valor" type="Integer" array="False" size=""/>
+            <assign variable="valor" expression="7"/>
+            <do expression="nom &lt;&gt; valor">
+                <output expression="&quot;Adivina un n&#250;mero&quot;" newline="True"/>
+                <input variable="nom"/>
+                <output expression="&quot;No has acertado&quot;" newline="True"/>
+            </do>
+            <output expression="&quot;Correcto el n&#250;mero es el:&quot; &amp; valor" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

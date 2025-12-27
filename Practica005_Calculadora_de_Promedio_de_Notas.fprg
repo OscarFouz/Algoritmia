@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 05:18:47 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTU7MDc6MjE6MjcgcC4gbS47MzM2OA=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDU6MTg6NDcgcC4gbS47MzszNDg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Calculadora de Promedio de Notas&#13;&#10;Escribe un algoritmo que pida al usuario las notas de tres ex&#225;menes y calcule el promedio de las notas."/>
+            <declare name="nota1" type="Integer" array="False" size=""/>
+            <declare name="nota2" type="Integer" array="False" size=""/>
+            <declare name="nota3" type="Integer" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <output expression="&quot;introduce el valor num&#233;rico de la nota 1&quot;" newline="True"/>
+            <input variable="nota1"/>
+            <output expression="&quot;introduce el valor num&#233;rico de la nota 2&quot;" newline="True"/>
+            <input variable="nota2"/>
+            <output expression="&quot;introduce el valor num&#233;rico de la nota 3&quot;" newline="True"/>
+            <input variable="nota3"/>
+            <assign variable="total" expression="((nota1 + nota2) + nota3) /3"/>
+            <output expression="&quot;La nota media de &quot; &amp; nota1 &amp; &quot;,&quot; &amp; nota2 &amp; &quot; y &quot; &amp; nota3 &amp; &quot; es:&quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

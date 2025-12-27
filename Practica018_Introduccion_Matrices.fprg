@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 05:07:06 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDM6NDY6NDcgcC4gbS47MzM3NQ=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDU6MDc6MDYgcC4gbS47NTszNDgx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Introduccion Matrices&#13;&#10;Generar matriz llenarla y leerla"/>
+            <declare name="Matriz" type="String" array="True" size="3"/>
+            <declare name="valor" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="Matriz[0]" expression="&quot;&#237;ndice1&quot;"/>
+            <assign variable="Matriz[1]" expression="&quot;&#237;ndice2&quot;"/>
+            <assign variable="Matriz[2]" expression="&quot;&#237;ndice 2&quot;"/>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <output expression="&quot;El valor es: &quot; &amp; Matriz[i]" newline="True"/>
+            </for>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <output expression="&quot;Escribe un valor para Matriz[&quot; &amp; i &amp; &quot;]&quot;" newline="True"/>
+                <input variable="valor"/>
+                <assign variable="Matriz[i]" expression="valor"/>
+            </for>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <output expression="&quot;El valor es: &quot; &amp; Matriz[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

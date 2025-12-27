@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 07:29:22 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDY6NTU6NDEgcC4gbS47MzM3Mg=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDc6Mjk6MjIgcC4gbS47MTA7MzUyOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Escribe un programa que convierta una temperatura de grados Celsius a Fahrenheit. El programa debe usar una funci&#243;n para pedirle al usuario que ingrese la temperatura en Celsius, y luego una funci&#243;n que realice la conversi&#243;n. El resultado debe ser mostrado en el `Main`."/>
+            <declare name="graFar" type="Real" array="False" size=""/>
+            <declare name="graCel" type="Real" array="False" size=""/>
+            <assign variable="graCel" expression="celsius()"/>
+            <assign variable="graFar" expression="conversor(graCel)"/>
+            <output expression="graFar &amp; &quot; Fahrenheit&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="celsius" type="Integer" variable="grados">
+        <parameters/>
+        <body>
+            <declare name="result" type="Real" array="False" size=""/>
+            <declare name="grados" type="Real" array="False" size=""/>
+            <output expression="&quot;Introduce la temperatura en grados Celsius&quot;" newline="True"/>
+            <input variable="grados"/>
+            <output expression="grados &amp; &quot; celsius son &quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="conversor" type="Integer" variable="resul">
+        <parameters>
+            <parameter name="grados" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="resul" type="Real" array="False" size=""/>
+            <assign variable="resul" expression="(grados * 1.8) + 32"/>
+        </body>
+    </function>
+</flowgorithm>

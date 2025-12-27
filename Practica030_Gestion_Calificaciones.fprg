@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-18 05:31:43 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTg7MDQ6NDc6MDIgcC4gbS47MzM2OQ=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTg7MDU6MzE6NDMgcC4gbS47MTI7MzUyNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Gesti&#243;n de Calificaciones&#13;&#10;Crea un programa para gestionar las calificaciones de un grupo de estudiantes.&#13;&#10;1. Pide al usuario la cantidad de estudiantes.&#13;&#10;2. Usa un array para almacenar las calificaciones (n&#250;meros enteros del 0 al 10).&#13;&#10;3. Usa un bucle para pedir las calificaciones una por una.&#13;&#10;4. Crea una funci&#243;n llamada `CalcularPromedio` que reciba el array y devuelva el promedio de las calificaciones.&#13;&#10;5. Usa un procedimiento llamado `MostrarResultados` que reciba el promedio y muestre un mensaje condicional en pantalla: &quot;Aprobado&quot; si el promedio es mayor o igual a 5, o &#13;&#10;&quot;Reprobado&quot; si es menor."/>
+            <declare name="numEstudiantes" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="media" type="Integer" array="False" size=""/>
+            <declare name="nota" type="Integer" array="False" size=""/>
+            <assign variable="nota" expression="0"/>
+            <assign variable="media" expression="0"/>
+            <output expression="&quot;&#191;Cuantos estudiantes se deben calificar?&quot;" newline="True"/>
+            <input variable="numEstudiantes"/>
+            <declare name="calificaciones" type="Integer" array="True" size="numEstudiantes"/>
+            <for variable="i" start="0" end="numEstudiantes -1" direction="inc" step="1">
+                <output expression="&quot;Introduce nota para el estudiante n&#186;. &quot; &amp; i+1" newline="True"/>
+                <input variable="nota"/>
+                <assign variable="calificaciones[i]" expression="nota"/>
+                <assign variable="nota" expression="0"/>
+            </for>
+            <assign variable="media" expression="CalcularPromedio(calificaciones,numEstudiantes)"/>
+            <call expression="MostrarResultados(calificaciones,media,numEstudiantes)"/>
+        </body>
+    </function>
+    <function name="CalcularPromedio" type="Integer" variable="promedio">
+        <parameters>
+            <parameter name="notas" type="Integer" array="True"/>
+            <parameter name="lonMat" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="promedio" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="suma" type="Integer" array="False" size=""/>
+            <declare name="nota" type="Integer" array="False" size=""/>
+            <assign variable="nota" expression="0"/>
+            <assign variable="suma" expression="0"/>
+            <for variable="i" start="0" end="lonMat -1" direction="inc" step="1">
+                <assign variable="suma" expression="suma + notas[i]"/>
+            </for>
+            <assign variable="promedio" expression="suma / lonMat"/>
+        </body>
+    </function>
+    <function name="MostrarResultados" type="None" variable="">
+        <parameters>
+            <parameter name="notas" type="Integer" array="True"/>
+            <parameter name="promedio" type="Integer" array="False"/>
+            <parameter name="lonMat" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="mensaje" type="String" array="False" size=""/>
+            <for variable="i" start="0" end="lonMat -1" direction="inc" step="1">
+                <assign variable="mensaje" expression="&quot;El estudiante n&#186; &quot; &amp; i + 1 &amp; &quot; ha obtenido una calificaci&#243;n de: &quot; &amp; notas[i] &amp; &quot; siendo esta nota &quot;"/>
+                <if expression="notas[i] &gt;= promedio">
+                    <then>
+                        <assign variable="mensaje" expression="mensaje &amp; &quot; mayor o igual al promedio &quot; &amp; promedio &amp; &quot; ha sido aprobado&quot;"/>
+                    </then>
+                    <else>
+                        <assign variable="mensaje" expression="mensaje &amp; &quot; menor al promedio &quot; &amp; promedio &amp; &quot; ha sido reprobado&quot;"/>
+                    </else>
+                </if>
+                <output expression="mensaje" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 07:48:29 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDY6NTU6NDEgcC4gbS47MzM3Mg=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDc6NDg6MjkgcC4gbS47MTU7MzU0Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="B&#250;squeda del N&#250;mero Mayor&#13;&#10;Crea un programa que pida al usuario que ingrese tres n&#250;meros enteros. Utiliza una funci&#243;n para encontrar y devolver el n&#250;mero m&#225;s grande de los tres. El programa principal solo debe mostrar el n&#250;mero mayor devuelto por la funci&#243;n."/>
+            <declare name="mayor" type="Integer" array="False" size=""/>
+            <assign variable="mayor" expression="entrada()"/>
+            <output expression="&quot;El mayor n&#250;mero introducido es: &quot; &amp; mayor" newline="True"/>
+        </body>
+    </function>
+    <function name="calcula" type="Integer" variable="resul">
+        <parameters>
+            <parameter name="num1" type="Integer" array="False"/>
+            <parameter name="num2" type="Integer" array="False"/>
+            <parameter name="num3" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="resul" type="Integer" array="False" size=""/>
+            <declare name="Matriz" type="Integer" array="True" size="2"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="Matriz[0]" expression="num2"/>
+            <assign variable="Matriz[1]" expression="num3"/>
+            <assign variable="resul" expression="num1"/>
+            <for variable="i" start="0" end="1" direction="inc" step="1">
+                <if expression="Matriz[i] &gt; resul">
+                    <then>
+                        <assign variable="resul" expression="Matriz[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+    <function name="entrada" type="Integer" variable="result">
+        <parameters/>
+        <body>
+            <declare name="result" type="Integer" array="False" size=""/>
+            <declare name="num1" type="Integer" array="False" size=""/>
+            <declare name="num2" type="Integer" array="False" size=""/>
+            <declare name="num3" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduce un n&#250;mero entero&quot;" newline="True"/>
+            <input variable="num1"/>
+            <output expression="&quot;Introduce otro n&#250;mero entero&quot;" newline="True"/>
+            <input variable="num2"/>
+            <output expression="&quot;Introduce un tercer n&#250;mero entero&quot;" newline="True"/>
+            <input variable="num3"/>
+            <assign variable="result" expression="calcula(num1,num2,num3)"/>
+        </body>
+    </function>
+</flowgorithm>

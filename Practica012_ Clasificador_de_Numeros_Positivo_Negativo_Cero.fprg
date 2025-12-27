@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 05:10:32 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTU7MDc6MzY6MTAgcC4gbS47MzM2Ng=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDU6MTA6MzIgcC4gbS47NjszNDc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text=" Clasificador de N&#250;meros (Positivo, Negativo o Cero)&#13;&#10;Dise&#241;a un algoritmo que pida un n&#250;mero al usuario y determine si es positivo, negativo o cero."/>
+            <declare name="nom" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduce un n&#250;mero entero&quot;" newline="True"/>
+            <input variable="nom"/>
+            <if expression="nom &gt; 0">
+                <then>
+                    <output expression="&quot;N&#250;mero positivo&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="nom &lt; 0">
+                        <then>
+                            <output expression="&quot;N&#250;mero negativo&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;N&#250;mero ni positivo, ni negativo es 0&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

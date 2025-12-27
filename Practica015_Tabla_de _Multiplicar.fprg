@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 05:05:05 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTY7MDc6MTM6NTkgcC4gbS47MzM3NQ=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDU6MDU6MDUgcC4gbS47NjszNDc5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Tabla de Multiplicar&#13;&#10;Escribe un algoritmo que pida un n&#250;mero al usuario y muestre su tabla de multiplicar del 1 al 10."/>
+            <declare name="nom" type="Integer" array="False" size=""/>
+            <declare name="itera" type="Integer" array="False" size=""/>
+            <declare name="inicio" type="Integer" array="False" size=""/>
+            <declare name="fin" type="Integer" array="False" size=""/>
+            <declare name="resul" type="Integer" array="False" size=""/>
+            <assign variable="inicio" expression="1"/>
+            <assign variable="fin" expression="10"/>
+            <assign variable="itera" expression="inicio"/>
+            <output expression="&quot;Escribe un n&#250;mero&quot;" newline="True"/>
+            <input variable="nom"/>
+            <for variable="itera" start="inicio" end="fin" direction="inc" step="1">
+                <assign variable="resul" expression="nom * itera"/>
+                <output expression="&quot;El valor de &quot; &amp; nom &amp; &quot; por &quot; &amp; itera &amp; &quot; es &quot; &amp; resul" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

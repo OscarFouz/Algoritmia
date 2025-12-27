@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 05:04:03 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTY7MDc6MTM6NTkgcC4gbS47MzM3NQ=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDU6MDQ6MDMgcC4gbS47MTM7MzUyMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Contador de D&#237;gitos en un N&#250;mero&#13;&#10;Dise&#241;a un algoritmo que pida un n&#250;mero entero positivo al usuario y cuente cu&#225;ntos d&#237;gitos tiene."/>
+            <declare name="nom" type="Integer" array="False" size=""/>
+            <declare name="valor" type="Integer" array="False" size=""/>
+            <declare name="suma" type="Integer" array="False" size=""/>
+            <declare name="incremento" type="Integer" array="False" size=""/>
+            <assign variable="valor" expression="1"/>
+            <assign variable="incremento" expression="10"/>
+            <assign variable="suma" expression="0"/>
+            <output expression="&quot;Introduce un n&#250;mero entero&quot;" newline="True"/>
+            <input variable="nom"/>
+            <do expression="nom &gt; valor">
+                <assign variable="suma" expression="suma + 1"/>
+                <assign variable="valor" expression="valor * incremento"/>
+            </do>
+            <output expression="&quot;El n&#250;mero: &quot; &amp; nom &amp; &quot; tiene &quot; &amp; suma &amp; &quot; d&#237;gitos&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

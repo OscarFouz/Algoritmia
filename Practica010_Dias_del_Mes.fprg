@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="oscar"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 05:12:28 p. m."/>
+        <attribute name="created" value="b3NjYXI7UENfT1NDQVI7MjAyNS0wOS0xNjsiMDQ6NTQ6NDYgIjsyMzU3"/>
+        <attribute name="edited" value="b3NjYXI7UENfT1NDQVI7MjAyNS0wOS0xNjsiMDU6MDc6MTggIjs1OzI0Njc="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDU6MTI6MjggcC4gbS47NDszNDgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text=" D&#237;as del Mes&#13;&#10;Escribe un algoritmo que pida un n&#250;mero de mes (del 1 al 12) y muestre la cantidad de d&#237;as que tiene ese mes.&#13;&#10;&#13;&#10;Nota: Puedes ignorar los a&#241;os bisiestos. Utiliza la siguiente informaci&#243;n:&#13;&#10;  * 31 d&#237;as: enero (1), marzo (3), mayo (5), julio (7), agosto (8), octubre (10), diciembre (12).&#13;&#10;  * 30 d&#237;as: abril (4), junio (6), septiembre (9), noviembre (11).&#13;&#10;  * 28 d&#237;as: febrero (2)."/>
+            <declare name="mes" type="Integer" array="False" size=""/>
+            <declare name="tiuno" type="Integer" array="False" size=""/>
+            <declare name="ventio" type="Integer" array="False" size=""/>
+            <declare name="treinta" type="Integer" array="False" size=""/>
+            <assign variable="tiuno" expression="31"/>
+            <assign variable="ventio" expression="28"/>
+            <assign variable="treinta" expression="30"/>
+            <output expression="&quot;Introduce un n&#250;mero de mes&quot;" newline="True"/>
+            <input variable="mes"/>
+            <if expression="mes &gt; 12 || mes &lt; 1">
+                <then>
+                    <output expression="&quot;Mes incorrecto, debe ser mayor a 0 y menor de 12&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="mes = 1 || mes = 3  || mes =5 || mes =7 || mes =8 || mes =10 || mes =12">
+                        <then>
+                            <output expression="&quot;El mes: &quot; &amp; mes &amp; &quot; tiene &quot; &amp; tiuno &amp; &quot; d&#237;as&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="mes = 2">
+                                <then>
+                                    <output expression="&quot;El mes: &quot; &amp; mes &amp; &quot; tiene &quot; &amp; ventio &amp; &quot; d&#237;as&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;El mes: &quot; &amp; mes &amp; &quot; tiene &quot; &amp; treinta &amp; &quot; d&#237;as&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

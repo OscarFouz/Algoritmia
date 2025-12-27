@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-18 07:32:01 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTg7MDU6MzI6MTYgcC4gbS47MzM2OQ=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTg7MDc6MzI6MDEgcC4gbS47MjE7MzUyMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Validar y Sumar N&#250;meros Positivos&#13;&#10;Haz un programa que pida al usuario 5 n&#250;meros. El programa debe usar una funci&#243;n EsPositivo que reciba un n&#250;mero y retorne true si es positivo y false si es negativo o cero. El programa principal debe almacenar solo los n&#250;meros positivos en un array y luego mostrar la suma total de esos n&#250;meros. Usa un bucle y una condici&#243;n para esta tarea. Si no se ingresa ning&#250;n n&#250;mero positivo, el programa debe mostrar un mensaje adecuado."/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="indi" type="Integer" array="False" size=""/>
+            <declare name="mensa" type="String" array="False" size=""/>
+            <declare name="numero" type="Integer" array="False" size=""/>
+            <declare name="suma" type="Integer" array="False" size=""/>
+            <assign variable="suma" expression="0"/>
+            <assign variable="indi" expression="0"/>
+            <declare name="numerosPositivos" type="Integer" array="True" size="5"/>
+            <assign variable="indi" expression="0"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;Introduce un n&#250;mero positivo o negativo &quot;" newline="True"/>
+                <input variable="numero"/>
+                <if expression="EsPositivo(numero) = True">
+                    <then>
+                        <assign variable="numerosPositivos[indi]" expression="numero"/>
+                        <assign variable="suma" expression="suma + numero"/>
+                        <assign variable="indi" expression="indi + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="mensa" expression="&quot;Los n&#250;meros positivos introducidos son: &quot;"/>
+            <if expression="suma = 0">
+                <then>
+                    <output expression="&quot;Ninguno de los n&#250;mero introducidos es positivo&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;la suma de los n&#250;mero introducidos es: &quot; &amp; suma" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="EsPositivo" type="Boolean" variable="SiNo">
+        <parameters>
+            <parameter name="num" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="SiNo" type="Boolean" array="False" size=""/>
+            <if expression="num &gt; 0">
+                <then>
+                    <assign variable="SiNo" expression="True"/>
+                </then>
+                <else>
+                    <assign variable="SiNo" expression="False"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

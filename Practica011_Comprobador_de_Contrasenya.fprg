@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 05:11:24 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTU7MDc6MzY6MTAgcC4gbS47MzM2Ng=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDU6MTE6MjQgcC4gbS47NDszNDc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Comprobador de Contrase&#241;a&#13;&#10;Crea un algoritmo que pida al usuario una contrase&#241;a. Si la contrase&#241;a es &quot;secreto123&quot;, debe mostrar &quot;Acceso concedido.&quot;. De lo contrario, debe mostrar &quot;Acceso denegado.&quot;."/>
+            <declare name="password" type="String" array="False" size=""/>
+            <declare name="valido" type="String" array="False" size=""/>
+            <assign variable="valido" expression="&quot;secreto123&quot;"/>
+            <output expression="&quot;Introduce la contrase&#241;a&quot;" newline="True"/>
+            <input variable="password"/>
+            <if expression="password = valido">
+                <then>
+                    <output expression="&quot;Acceso concedido&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Acceso denegado&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 05:25:16 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDM6NDY6NDcgcC4gbS47MzM3NQ=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDU6MjU6MTYgcC4gbS47MTA7MzUyNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Almacenar y Mostrar Nombres&#13;&#10;Crea un algoritmo que pida al usuario 3 nombres de amigos y los guarde en un array. Despu&#233;s, muestra cada nombre en una l&#237;nea separada."/>
+            <declare name="Matriz" type="String" array="True" size="3"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <output expression="&quot;Escribe un nombre&quot;" newline="True"/>
+                <input variable="Matriz[i]"/>
+            </for>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <output expression="&quot;El nombre n&#250;mero &quot; &amp; i + 1 &amp; &quot; es &quot; &amp; Matriz[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

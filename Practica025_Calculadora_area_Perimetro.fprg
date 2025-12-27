@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 07:07:11 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDY6NTU6NDEgcC4gbS47MzM3Mg=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDc6MDc6MTEgcC4gbS47NjszNDgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text=" Calculadora de &#193;rea y Per&#237;metro&#13;&#10;Crea un programa que calcule el &#225;rea y el per&#237;metro de un rect&#225;ngulo. El programa principal debe solicitar la base y la altura al usuario y luego llamar a dos funciones separadas para realizar los c&#225;lculos. Una funci&#243;n se encargar&#225; de calcular el &#225;rea y la otra el per&#237;metro. Ambas funciones deben devolver el resultado al programa principal para ser mostrado."/>
+            <declare name="base" type="Integer" array="False" size=""/>
+            <declare name="altura" type="Integer" array="False" size=""/>
+            <output expression="&quot;Entra la base de un rectangulo&quot;" newline="True"/>
+            <input variable="base"/>
+            <output expression="&quot;Entra la altura de un rectangulo&quot;" newline="True"/>
+            <input variable="altura"/>
+            <output expression="&quot;El &#225;rea del rectangulo es: &quot; &amp; area(base, altura)" newline="True"/>
+            <output expression="&quot;El per&#237;meto del rectangulo es: &quot; &amp; perimetro(base, altura)" newline="True"/>
+        </body>
+    </function>
+    <function name="area" type="Integer" variable="resul">
+        <parameters>
+            <parameter name="alt" type="Integer" array="False"/>
+            <parameter name="bas" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="resul" type="Integer" array="False" size=""/>
+            <assign variable="resul" expression="bas * alt"/>
+        </body>
+    </function>
+    <function name="perimetro" type="None" variable="">
+        <parameters>
+            <parameter name="bas" type="Integer" array="False"/>
+            <parameter name="alt" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Integer" array="False" size=""/>
+            <assign variable="result" expression="bas + bas + alt + alt"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 07:59:25 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDY6NTU6NDEgcC4gbS47MzM3Mg=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDc6NTk6MjUgcC4gbS47MTk7MzU0NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text=" Suma de N&#250;meros en un Rango&#13;&#10;&#13;&#10;Haz un programa que calcule la suma de todos los n&#250;meros enteros en un rango dado. El programa principal debe pedir el inicio y el fin del rango. Utiliza una funci&#243;n llamada `SumarRango` que reciba estos dos n&#250;meros y devuelva la suma total."/>
+            <declare name="menor" type="Integer" array="False" size=""/>
+            <declare name="mayor" type="Integer" array="False" size=""/>
+            <declare name="suma" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduce un rango de n&#250;meros en el que el menor sea: &quot;" newline="True"/>
+            <input variable="menor"/>
+            <output expression="&quot;y el mayor sea&quot;" newline="True"/>
+            <input variable="mayor"/>
+            <assign variable="suma" expression="SumarRango(menor,mayor)"/>
+            <output expression="&quot;La suma del rango de n&#250;meros entre &quot; &amp; menor &amp; &quot; y &quot;  &amp; mayor &amp; &quot; es &quot; &amp; suma" newline="True"/>
+        </body>
+    </function>
+    <function name="SumarRango" type="Integer" variable="resul">
+        <parameters>
+            <parameter name="mayor" type="Integer" array="False"/>
+            <parameter name="menor" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="resul" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="resul" expression="0"/>
+            <for variable="i" start="menor" end="mayor" direction="inc" step="1">
+                <assign variable="resul" expression="resul + i"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

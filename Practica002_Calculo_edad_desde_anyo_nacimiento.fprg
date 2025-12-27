@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 05:16:19 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTU7MDY6NDk6MzUgcC4gbS47MzM3Ng=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDU6MTY6MTkgcC4gbS47MjszNDgy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="C&#225;lculo de edad a partir del a&#241;o de nacimiento"/>
+            <comment text="Declaraci&#243;n de variables"/>
+            <declare name="nom" type="String" array="False" size=""/>
+            <declare name="edad" type="Integer" array="False" size=""/>
+            <declare name="anyNacimiento" type="Integer" array="False" size=""/>
+            <declare name="anyActual" type="Integer" array="False" size=""/>
+            <comment text="Asignaci&#243;n de valor a variable anyActual"/>
+            <assign variable="anyActual" expression="2025"/>
+            <comment text="Entrada de datos&#13;&#10;"/>
+            <input variable="nom"/>
+            <input variable="anyNacimiento"/>
+            <comment text="C&#225;lculo edad&#13;&#10;"/>
+            <assign variable="anys" expression="anyActual - anyNacimiento"/>
+            <comment text="Salida "/>
+            <output expression="&quot;Hola &quot; &amp; nom &amp; &quot;, tienes &quot; &amp; anys &amp; &quot; a&#241;os&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

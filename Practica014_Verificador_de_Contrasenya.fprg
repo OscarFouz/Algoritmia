@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 05:05:35 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTU7MDc6MzY6MTAgcC4gbS47MzM2Ng=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDU6MDU6MzUgcC4gbS47NTszNDgx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Verificador de Contrase&#241;a&#13;&#10;Dise&#241;a un algoritmo que le pida al usuario una contrase&#241;a. El programa debe seguir pidiendo la contrase&#241;a hasta que el usuario ingrese &quot;secreto&quot;."/>
+            <declare name="password" type="String" array="False" size=""/>
+            <declare name="valido" type="String" array="False" size=""/>
+            <assign variable="valido" expression="&quot;secreto&quot;"/>
+            <do expression="password &lt;&gt; valido">
+                <output expression="&quot;Introduce la contrase&#241;a&quot;" newline="True"/>
+                <input variable="password"/>
+            </do>
+            <output expression="&quot;Acceso concedido&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

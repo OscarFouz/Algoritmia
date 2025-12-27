@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="oscar"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 05:13:47 p. m."/>
+        <attribute name="created" value="b3NjYXI7UENfT1NDQVI7MjAyNS0wOS0xNjsiMDQ6NTQ6NDYgIjsyMzU3"/>
+        <attribute name="edited" value="b3NjYXI7UENfT1NDQVI7MjAyNS0wOS0xNjsiMDQ6NTc6NTUgIjsyOzI0Njk="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDU6MTM6NDcgcC4gbS47MTszNDc5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Verificador de Edad para Votaci&#243;n&#13;&#10;Crea un algoritmo que pida la edad a un usuario. Si la edad es 18 o m&#225;s, debe mostrar el mensaje &quot;Puedes votar.&quot;. En caso contrario, no debe mostrar ning&#250;n mensaje."/>
+            <declare name="edad" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduce tu edad&quot;" newline="True"/>
+            <input variable="edad"/>
+            <if expression="edad &gt;= 18">
+                <then>
+                    <output expression="&quot;Puedes votar&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

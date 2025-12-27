@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 05:17:48 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTU7MDc6MTM6NDQgcC4gbS47MzM2OA=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDU6MTc6NDggcC4gbS47MzszNDg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Conversor de Moneda (Euros a D&#243;lares)&#13;&#10;Dise&#241;a un algoritmo que convierta una cantidad de euros a d&#243;lares. Utiliza un tipo de cambio fijo de 1 euro = 1.08 d&#243;lares."/>
+            <comment text="Declaraci&#243;n de variables"/>
+            <declare name="dolar" type="Integer" array="False" size=""/>
+            <declare name="euro" type="Real" array="False" size=""/>
+            <declare name="valor" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <comment text="Entrada de valores&#13;&#10;"/>
+            <assign variable="valor" expression="1.8"/>
+            <output expression="&quot;&#191;Cuantos euros quieres convertir a d&#243;lares?&quot;" newline="True"/>
+            <input variable="euro"/>
+            <assign variable="total" expression="euro * valor"/>
+            <output expression="euro &amp; &quot; euros son &quot; &amp; total &amp; &quot; d&#243;lares&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

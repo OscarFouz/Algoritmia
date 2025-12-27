@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-18 05:59:00 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTg7MDU6MzI6MTYgcC4gbS47MzM2OQ=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTg7MDU6NTk6MDAgcC4gbS47NjszNDg0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="B&#250;squeda y Conteo en un Array&#13;&#10;Escribe un programa que pida al usuario 10 n&#250;meros enteros y los almacene en un array. Luego, pide un n&#250;mero adicional para buscar. El programa debe usar una funci&#243;n que reciba el array y el n&#250;mero a buscar, y retorne la cantidad de veces que el n&#250;mero aparece en el array. El programa principal debe mostrar un mensaje condicional indicando si el n&#250;mero se encontr&#243; y cu&#225;ntas veces."/>
+            <declare name="numerosEnteros" type="Integer" array="True" size="10"/>
+            <declare name="numeroBuscar" type="Integer" array="False" size=""/>
+            <declare name="mensa" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="mensa" expression="&quot;&quot;"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Introduce un n&#250;mero entero&quot;" newline="True"/>
+                <input variable="numerosEnteros[i]"/>
+            </for>
+            <output expression="&quot;Escribe el n&#250;mero a buscar&quot;" newline="True"/>
+            <input variable="numeroBuscar"/>
+            <assign variable="mensa" expression="&quot;En la secuencia &quot;"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="mensa" expression="mensa &amp; numerosEnteros[i] &amp; &quot;, &quot;"/>
+            </for>
+            <assign variable="mensa" expression="mensa &amp; &quot;el n&#250;mero &quot; &amp; numeroBuscar &amp; &quot; ha aparecido &quot; &amp; encontrado(numerosEnteros,numeroBuscar,10) &amp; &quot; veces&quot;"/>
+            <output expression="mensa" newline="True"/>
+        </body>
+    </function>
+    <function name="encontrado" type="Integer" variable="encontrado">
+        <parameters>
+            <parameter name="numeros" type="Integer" array="True"/>
+            <parameter name="buscado" type="Integer" array="False"/>
+            <parameter name="cuantos" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="encontrado" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="encontrado" expression="0"/>
+            <for variable="i" start="0" end="cuantos -1" direction="inc" step="1">
+                <if expression="numeros[i] = buscado">
+                    <then>
+                        <assign variable="encontrado" expression="encontrado + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="oscar"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 05:13:08 p. m."/>
+        <attribute name="created" value="b3NjYXI7UENfT1NDQVI7MjAyNS0wOS0xNjsiMDQ6NTQ6NDYgIjsyMzU3"/>
+        <attribute name="edited" value="b3NjYXI7UENfT1NDQVI7MjAyNS0wOS0xNjsiMDU6MDM6NDMgIjs0OzI0NjA="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDU6MTM6MDggcC4gbS47MTszNDc2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Clasificador de Notas&#13;&#10;Dise&#241;a un algoritmo que pida la nota de un examen (un n&#250;mero entre 0 y 10). Si la nota es 5 o m&#225;s, muestra el mensaje &quot;&#161;Aprobado!&quot;. Si es menor que 5, muestra &quot;Suspendido.&quot;."/>
+            <declare name="nota" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduce una nota entre 1 y 10&quot;" newline="True"/>
+            <input variable="nota"/>
+            <if expression="nota &gt;= 5">
+                <then>
+                    <if expression="nota &gt; 10">
+                        <then>
+                            <output expression="&quot;Nota mayor a 10 no v&#225;lida&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Aprobado&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="nota &lt; 0">
+                        <then>
+                            <output expression="&quot;Nota menor a 0 no v&#225;lida&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Suspendido&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

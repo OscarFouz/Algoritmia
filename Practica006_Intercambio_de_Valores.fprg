@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 05:19:28 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTU7MDc6Mjk6NDQgcC4gbS47MzM3NQ=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDU6MTk6MjggcC4gbS47MjszNDg1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Intercambio de Valores&#13;&#10;Crea un algoritmo que pida dos n&#250;meros al usuario e intercambie sus valores. Utiliza una variable temporal para realizar el intercambio.&#13;&#10;"/>
+            <declare name="valor1" type="String" array="False" size=""/>
+            <declare name="valor2" type="String" array="False" size=""/>
+            <declare name="valorCambio" type="String" array="False" size=""/>
+            <output expression="&quot;Introduce el primer nombre&quot;" newline="True"/>
+            <input variable="valor1"/>
+            <output expression="&quot;Introduce el segundo nombre&quot;" newline="True"/>
+            <input variable="valor2"/>
+            <output expression="&quot;El primer nombre es &quot; &amp; valor1 &amp; &quot; y el segundo nombre es &quot; &amp; valor2" newline="True"/>
+            <output expression="&quot;pero ahora.......&quot;" newline="True"/>
+            <assign variable="valorCambio" expression="valor1"/>
+            <assign variable="valor1" expression="valor2"/>
+            <assign variable="valor2" expression="valorCambio"/>
+            <output expression="&quot;El primer nombre es &quot; &amp; valor1 &amp; &quot; y el segundo nombre es &quot; &amp; valor2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-18 08:07:43 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTg7MDU6MzI6MTYgcC4gbS47MzM2OQ=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTg7MDg6MDc6NDMgcC4gbS47MzE7MzUzMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Conversor de Moneda Interactivo&#13;&#10;Escribe un programa que ofrezca un men&#250; con dos opciones: 1. Convertir de USD a EUR y 2. Convertir de EUR a USD.&#13;&#10;1. Usa un procedimiento para mostrar el men&#250; y pedir al usuario que elija una opci&#243;n.&#13;&#10;2. Usa una estructura condicional para ejecutar la conversi&#243;n elegida.&#13;&#10;3. Crea una funci&#243;n `ConvertirMoneda` que reciba la cantidad y el tipo de conversi&#243;n (por ejemplo, 'USD_a_EUR' o 'EUR_a_USD') y devuelva el resultado. Usa un bucle para permitir al usuario realizar varias conversiones hasta que decida salir."/>
+            <declare name="USD" type="Real" array="False" size=""/>
+            <declare name="EUR" type="Real" array="False" size=""/>
+            <declare name="cantidad" type="Integer" array="False" size=""/>
+            <declare name="SiNo" type="String" array="False" size=""/>
+            <declare name="valorFinal" type="Integer" array="False" size=""/>
+            <assign variable="valorFinal" expression="0"/>
+            <assign variable="SiNo" expression="&quot;S&quot;"/>
+            <assign variable="cantidad" expression="0"/>
+            <assign variable="USD" expression="1.8"/>
+            <assign variable="EUR" expression="0.9"/>
+            <while expression="SiNo = &quot;S&quot;">
+                <declare name="resp" type="Integer" array="False" size=""/>
+                <declare name="mensa" type="String" array="False" size=""/>
+                <assign variable="resp" expression="MuestraMenu()"/>
+                <if expression="resp = 1">
+                    <then>
+                        <output expression="&quot;&#191;Cuantos USD quiere cambiar?&quot;" newline="True"/>
+                        <input variable="cantidad"/>
+                        <output expression="cantidad &amp; &quot; USD son &quot; &amp; ConvertirMoneda(cantidad, EUR) &amp; &quot; EUR&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;&#191;Cuantos EUR quiere cambiar?&quot;" newline="True"/>
+                        <input variable="cantidad"/>
+                        <output expression="cantidad &amp; &quot; EUR son &quot; &amp; ConvertirMoneda(cantidad, USD) &amp; &quot; USD &quot;" newline="True"/>
+                    </else>
+                </if>
+                <output expression="&quot;Introduce S si quieres hacer otra conversi&#243;n o cualquier otro valor para salir &quot;" newline="True"/>
+                <input variable="SiNo"/>
+            </while>
+        </body>
+    </function>
+    <function name="ConvertirMoneda" type="Real" variable="valorFinal">
+        <parameters>
+            <parameter name="monedas" type="Integer" array="False"/>
+            <parameter name="valor" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="valorFinal" type="Real" array="False" size=""/>
+            <assign variable="valorFinal" expression="monedas * valor"/>
+        </body>
+    </function>
+    <function name="MuestraMenu" type="Integer" variable="resp">
+        <parameters/>
+        <body>
+            <declare name="resp" type="Integer" array="False" size=""/>
+            <assign variable="resp" expression="0"/>
+            <do expression="resp &lt; 1 || resp &gt; 2">
+                <output expression="&quot; - Introduce 1 para convertir USD a EUR &quot; &amp;&#13;&#10;&quot; - Introduce 2 para convertir EUR a USD &quot;" newline="False"/>
+                <input variable="resp"/>
+                <if expression="resp &lt; 1 || resp &gt; 2">
+                    <then>
+                        <output expression="&quot;La opci&#243;n introducida debe ser 1 o 2&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

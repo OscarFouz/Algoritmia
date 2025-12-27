@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 05:59:13 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDU6NTI6NTUgcC4gbS47MzM3Mw=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDU6NTk6MTMgcC4gbS47MjszNDgz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Inicio a funciones"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="5"/>
+            <output expression="cuadrado(n)" newline="True"/>
+        </body>
+    </function>
+    <function name="cuadrado" type="Integer" variable="resul">
+        <parameters>
+            <parameter name="m" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="resul" type="Integer" array="False" size=""/>
+            <assign variable="resul" expression="m ^ 2"/>
+        </body>
+    </function>
+</flowgorithm>

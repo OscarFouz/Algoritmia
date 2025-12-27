@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 08:05:14 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDY6NTU6NDEgcC4gbS47MzM3Mg=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDg6MDU6MTQgcC4gbS47MjE7MzUyNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text=" Verificaci&#243;n de Paridad&#13;&#10;Desarrolla un programa que pida un n&#250;mero entero al usuario. Utiliza un procedimiento para verificar si el n&#250;mero es par o impar y mostrar el resultado directamente en pantalla. A diferencia de las funciones, este procedimiento no devolver&#225; un valor, sino que realizar&#225; la acci&#243;n de mostrar el mensaje."/>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduce un n&#250;mero entero&quot;" newline="True"/>
+            <input variable="num"/>
+            <call expression="ParImpar(num)"/>
+        </body>
+    </function>
+    <function name="ParImpar" type="Integer" variable="resul">
+        <parameters>
+            <parameter name="num" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <if expression="num % 2 = 0">
+                <then>
+                    <output expression="&quot;El n&#250;mero &quot; &amp; num &amp; &quot; es par&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;El n&#250;mero &quot; &amp; num &amp; &quot; es impar&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

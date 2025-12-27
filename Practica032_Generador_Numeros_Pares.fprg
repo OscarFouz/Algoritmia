@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-18 06:54:57 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTg7MDU6MzI6MTYgcC4gbS47MzM2OQ=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTg7MDY6NTQ6NTcgcC4gbS47MTI7MzUzNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Generador de N&#250;meros Pares&#13;&#10;Crea un programa que genere y almacene en un array los primeros 50 n&#250;meros pares. El programa debe usar un procedimiento llamado GenerarNumerosPares que llene el array. Luego, usa otro procedimiento llamado MostrarArray para imprimir por pantalla cada uno de los n&#250;meros del array. El programa principal solo se encargar&#225; de llamar a estos dos procedimientos."/>
+            <declare name="numerosPares" type="Integer" array="True" size="50"/>
+            <call expression="GenerarNumerosPares(numerosPares,50)"/>
+            <call expression="MostrarArray(numerosPares,50)"/>
+        </body>
+    </function>
+    <function name="GenerarNumerosPares" type="None" variable="">
+        <parameters>
+            <parameter name="numerosPares" type="Integer" array="True"/>
+            <parameter name="longi" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="cont" type="Integer" array="False" size=""/>
+            <assign variable="cont" expression="0"/>
+            <assign variable="i" expression="0"/>
+            <while expression="cont &lt; 50">
+                <if expression="i % 2 = 0">
+                    <then>
+                        <assign variable="numerosPares[cont]" expression="i"/>
+                        <assign variable="cont" expression="cont+1"/>
+                        <assign variable="i" expression="i + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="i" expression="i + 1"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+    <function name="MostrarArray" type="None" variable="">
+        <parameters>
+            <parameter name="numerosPares" type="Integer" array="True"/>
+            <parameter name="long" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="mensa" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="mensa" expression="&quot;Los primeros 50 n&#250;meros pares son: &quot;"/>
+            <for variable="i" start="0" end="long -1" direction="inc" step="1">
+                <assign variable="mensa" expression="mensa &amp; numerosPares[i]"/>
+                <if expression="i &lt; long - 1">
+                    <then>
+                        <assign variable="mensa" expression="mensa &amp; &quot;, &quot;"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="mensa" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

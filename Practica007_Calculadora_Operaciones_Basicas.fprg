@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 05:20:06 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTU7MDc6MzY6MTAgcC4gbS47MzM2Ng=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDU6MjA6MDYgcC4gbS47MjszNDcz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Calculadora de Operaciones B&#225;sicas&#13;&#10;Dise&#241;a un algoritmo que pida dos n&#250;meros al usuario y muestre el resultado de su suma, resta, multiplicaci&#243;n y divisi&#243;n."/>
+            <declare name="valor1" type="Integer" array="False" size=""/>
+            <declare name="valor2" type="Integer" array="False" size=""/>
+            <declare name="suma" type="Integer" array="False" size=""/>
+            <declare name="resta" type="Real" array="False" size=""/>
+            <declare name="multiplica" type="Integer" array="False" size=""/>
+            <declare name="divide" type="Real" array="False" size=""/>
+            <output expression="&quot;Entra un n&#250;mero&quot;" newline="True"/>
+            <input variable="valor1"/>
+            <output expression="&quot;Entra otro n&#250;mero&quot;" newline="True"/>
+            <input variable="valor2"/>
+            <assign variable="suma" expression="valor1 + valor2"/>
+            <assign variable="resta" expression="valor1 - valor2"/>
+            <assign variable="multiplica" expression="valor1 * valor2"/>
+            <if expression="valor2 = 0">
+                <then>
+                    <output expression="&quot;No es posible dividir por 0 por lo que asignamos el valor 0 a esta divisi&#243;n &quot;" newline="True"/>
+                    <assign variable="divide" expression="0"/>
+                </then>
+                <else>
+                    <assign variable="divide" expression="valor1 / valor2"/>
+                </else>
+            </if>
+            <output expression="&quot;Los n&#250;meros:&quot; &amp; valor1 &amp; &quot; y &quot; &amp; valor2 &amp;&#13;&#10;&quot; sumados dan: &quot; &amp; suma &amp;&#13;&#10;&quot; restados dan: &quot; &amp; resta &amp;&#13;&#10;&quot; multiplicados dan: &quot; &amp; multiplica &amp;&#13;&#10;&quot; dividos dan: &quot; &amp; divide" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

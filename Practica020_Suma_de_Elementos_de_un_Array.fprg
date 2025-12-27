@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 05:30:35 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDM6NDY6NDcgcC4gbS47MzM3NQ=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDU6MzA6MzUgcC4gbS47MTU7MzUyOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Suma de Elementos de un Array&#13;&#10;Dise&#241;a un algoritmo que declare un array de n&#250;meros enteros con 5 elementos predefinidos (por ejemplo: `[10, 20, 30, 40, 50]`) y calcule la suma de todos ellos."/>
+            <declare name="Matriz" type="Integer" array="True" size="5"/>
+            <declare name="valor" type="Integer" array="False" size=""/>
+            <declare name="mensaje" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="mensaje" expression="&quot;&quot;"/>
+            <assign variable="valor" expression="0"/>
+            <assign variable="Matriz[0]" expression="10"/>
+            <assign variable="Matriz[1]" expression="20"/>
+            <assign variable="Matriz[2]" expression="30"/>
+            <assign variable="Matriz[3]" expression="40"/>
+            <assign variable="Matriz[4]" expression="50"/>
+            <comment text="Mejor llenar la matriz con un random"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <assign variable="Matriz[i]" expression="random(100)"/>
+                <assign variable="valor" expression="valor + Matriz[i]"/>
+            </for>
+            <assign variable="mensaje" expression="&quot;El valor de &quot;"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <if expression="i = 4">
+                    <then>
+                        <assign variable="mensaje" expression="mensaje &amp; Matriz[i] &amp; &quot; es igual a: &quot; &amp; valor"/>
+                    </then>
+                    <else>
+                        <assign variable="mensaje" expression="mensaje &amp; Matriz[i] &amp; &quot; + &quot;"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="mensaje" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

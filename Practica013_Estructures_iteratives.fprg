@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Alumne_tarda1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-17 05:06:07 p. m."/>
+        <attribute name="created" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTU7MDc6MzY6MTAgcC4gbS47MzM2Ng=="/>
+        <attribute name="edited" value="QWx1bW5lX3RhcmRhMTtMVDJCUzIzNDUyOzIwMjUtMDktMTc7MDU6MDY6MDcgcC4gbS47MTE7MzUyNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Estructures iteratives&#13;&#10;Ejercicio 1: Suma de los primeros N n&#250;meros&#13;&#10;Crea un algoritmo que pida un n&#250;mero entero `N` al usuario y calcule la suma de todos los n&#250;meros desde 1 hasta `N`."/>
+            <declare name="nom" type="Integer" array="False" size=""/>
+            <declare name="suma" type="Integer" array="False" size=""/>
+            <declare name="incremento" type="Integer" array="False" size=""/>
+            <declare name="inicio" type="Integer" array="False" size=""/>
+            <assign variable="suma" expression="0"/>
+            <assign variable="inicio" expression="1"/>
+            <assign variable="incremento" expression="inicio"/>
+            <output expression="&quot;Introduce un n&#250;mero entero&quot;" newline="True"/>
+            <input variable="nom"/>
+            <while expression="incremento &lt; nom">
+                <assign variable="suma" expression="suma + incremento"/>
+                <assign variable="incremento" expression="incremento + 1"/>
+            </while>
+            <assign variable="suma" expression="suma + incremento"/>
+            <output expression="&quot;La suma desde 1 hasta &quot; &amp; nom &amp; &quot; es de: &quot; &amp; suma" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
